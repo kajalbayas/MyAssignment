@@ -1,0 +1,29 @@
+.user-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+    table {
+        width: 100%;
+    }
+}
+.register-contain {
+    margin-top: 7%;
+}
+h2 {
+    font-size: 26px;
+    font-weight: 600;
+    font-family: cursive;
+}
+
+.mat-header-cell ,.mat-cell{
+    text-align: center;
+}
+
+.mat-paginator {
+    width: 100%;
+}
+.mat-raised-button{
+    margin: 3%;
+}

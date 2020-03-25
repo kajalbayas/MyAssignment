@@ -1,0 +1,28 @@
+
+<div class="">
+    <div class="row">
+        <mat-card>
+            <mat-card-title *ngIf="!isEdit" class="text-center">Register</mat-card-title>
+            <mat-card-title *ngIf="isEdit" class="text-center">Edit Details</mat-card-title>
+    <mat-card-content>
+        
+        <form [formGroup]="registerForm" class="form-container">
+            <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput type="text" formControlName="name" placeholder="" maxlength="25">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" formControlName="email" placeholder="" maxlength="25">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Phone Number</mat-label>
+                <input matInput type="text" formControlName="phoneNumber" placeholder="" maxlength="10">
+            </mat-form-field>
+            <button mat-raised-button *ngIf="!isEdit" [disabled]="this.registerForm?.invalid" color="primary" >Submit</button>
+            <button mat-raised-button *ngIf="isEdit"[disabled]="this.registerForm?.invalid" type="button" color="primary" >Update</button>
+        </form>
+    </mat-card-content>
+    </mat-card>
+    </div>
+</div>
